@@ -1,0 +1,25 @@
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: pure-405
+provisioner: pure-csi
+parameters:
+    backend: block
+allowedTopologies:
+  - matchLabelExpressions:
+      - key: topology.purestorage.com/model
+        values:
+          - "405"
+---
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: pure-m20
+provisioner: pure-csi
+parameters:
+    backend: block
+allowedTopologies:
+  - matchLabelExpressions:
+      - key: topology.purestorage.com/model
+        values:
+          - m20

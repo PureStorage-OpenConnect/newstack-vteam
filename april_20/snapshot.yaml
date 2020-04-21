@@ -1,0 +1,8 @@
+kind: VolumeSnapshot
+metadata:
+  name: volumesnapshot-1
+spec:
+  snapshotClassName: pure-snapshotclass
+  source:
+    name: minio-pv-claim
+    kind: PersistentVolumeClaim

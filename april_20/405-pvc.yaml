@@ -1,0 +1,10 @@
+kind: PersistentVolumeClaim
+metadata:
+  name: 405-volume
+spec:
+  storageClassName: pure-405
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
